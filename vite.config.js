@@ -43,19 +43,21 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom', 'lucide-react'],
         },
-        entryFileNames: 'js/[name]-[hash].js',
-        chunkFileNames: 'js/[name]-[hash].js',
+        // Todos os assets em /assets/ para compatibilidade com .htaccess
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name.split('.')
           const ext = info[info.length - 1]
+          // Todos os assets em /assets/ (imagens, fonts, css, etc)
           if (/png|jpe?g|gif|svg|webp/.test(ext)) {
-            return `images/[name]-[hash][extname]`
+            return `assets/images/[name]-[hash][extname]`
           } else if (/woff|woff2|eot|ttf|otf/.test(ext)) {
-            return `fonts/[name]-[hash][extname]`
+            return `assets/fonts/[name]-[hash][extname]`
           } else if (ext === 'css') {
-            return `css/[name]-[hash][extname]`
+            return `assets/[name]-[hash][extname]`
           }
-          return `[name]-[hash][extname]`
+          return `assets/[name]-[hash][extname]`
         },
       },
     },
