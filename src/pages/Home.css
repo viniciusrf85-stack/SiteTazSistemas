@@ -7,3 +7,7 @@
 .home main {
   flex: 1;
 }
+
+section {
+  scroll-margin-top: 80px;
+}

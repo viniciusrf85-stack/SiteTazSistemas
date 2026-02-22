@@ -1,0 +1,25 @@
+# Robots.txt para TAZSistemas
+# Permite indexação de todo o site
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /private
+Disallow: /*.json$
+Disallow: /node_modules/
+
+# Sitemap
+Sitemap: https://www.tazsistemas.com.br/sitemap.xml
+
+# Crawl Delay (opcional - tempo entre requisições)
+Crawl-delay: 1
+
+# Especificações para Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Especificações para Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

@@ -29,19 +29,28 @@ function Header() {
       <div className="container">
         <div className="header-content">
           <div className="logo">
-            <h1>TazSistemas</h1>
+            <picture>
+              <source srcSet="/taz-logo.webp" type="image/webp" />
+              <img src="/taz-logo.png" alt="TAZ Zenith" className="logo-image" />
+            </picture>
+            <div className="logo-text">
+              <h1>TAZSistemas</h1>
+              <span className="logo-tagline">Technology · Architecture · Zenith</span>
+            </div>
           </div>
           
           <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
-            <a href="#inicio" onClick={(e) => { e.preventDefault(); scrollToSection('inicio') }}>Home</a>
+            <a href="#inicio" onClick={(e) => { e.preventDefault(); scrollToSection('inicio') }} className="nav-link">
+              Início
+            </a>
             
             <div 
               className="nav-dropdown"
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <a href="#servicos" onClick={(e) => { e.preventDefault(); scrollToSection('servicos') }}>
-                Nossos Serviços <ChevronDown size={16} />
+              <a href="#servicos" onClick={(e) => { e.preventDefault(); scrollToSection('servicos') }} className="nav-link">
+                Serviços <ChevronDown size={16} />
               </a>
               {servicesOpen && (
                 <div className="dropdown-menu">
@@ -58,9 +67,13 @@ function Header() {
               )}
             </div>
             
-            <a href="#beneficios" onClick={(e) => { e.preventDefault(); scrollToSection('beneficios') }}>Benefícios</a>
-            <a href="#sobre" onClick={(e) => { e.preventDefault(); scrollToSection('sobre') }}>Quem Somos</a>
-            <a href="#contato" onClick={(e) => { e.preventDefault(); scrollToSection('contato') }} className="btn-contact">
+            <a href="#beneficios" onClick={(e) => { e.preventDefault(); scrollToSection('beneficios') }} className="nav-link">
+              Benefícios
+            </a>
+            <a href="#sobre" onClick={(e) => { e.preventDefault(); scrollToSection('sobre') }} className="nav-link">
+              Sobre
+            </a>
+            <a href="#contato" onClick={(e) => { e.preventDefault(); scrollToSection('contato') }} className="btn btn-primary">
               Contato
             </a>
           </nav>

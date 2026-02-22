@@ -5,7 +5,7 @@ function Services() {
   const services = [
     {
       icon: <Code size={48} />,
-      title: 'Desenvolvimento de Software',
+      title: 'Desenvolvimento de Software Sob Medida',
       description: 'Sistemas personalizados, aplicações web e mobile sob medida para suas necessidades específicas.',
       items: [
         'Desenvolvimento de sistemas personalizados',
@@ -16,7 +16,7 @@ function Services() {
     },
     {
       icon: <Brain size={48} />,
-      title: 'Consultoria Especializada',
+      title: 'Consultoria em Arquitetura de Software',
       description: 'Orientações estratégicas para transformação digital e otimização de processos através da tecnologia.',
       items: [
         'Consultoria em tecnologia',
@@ -27,7 +27,7 @@ function Services() {
     },
     {
       icon: <Users size={48} />,
-      title: 'Alocação de Profissionais',
+      title: 'Alocação de Desenvolvedores e Especialistas',
       description: 'Equipe especializada para complementar seu time ou executar projetos específicos.',
       items: [
         'Desenvolvedores especializados',
@@ -42,7 +42,7 @@ function Services() {
     <section id="servicos" className="services">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Nossos Serviços</h2>
+          <h2 className="section-title">Serviços de Desenvolvimento e Tecnologia</h2>
         </div>
 
         <div className="services-grid">

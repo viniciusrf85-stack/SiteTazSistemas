@@ -1,0 +1,49 @@
+/* Form Error Styles */
+.form-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  margin-top: 4px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  color: #721c24;
+  font-size: 13px;
+  font-weight: 500;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error-icon {
+  flex-shrink: 0;
+  color: #dc3545;
+}
+
+.error-message {
+  flex: 1;
+  line-height: 1.4;
+}
+
+/* Input com erro */
+input.has-error,
+textarea.has-error {
+  border-color: #dc3545 !important;
+  background-color: #fff5f5;
+}
+
+input.has-error:focus,
+textarea.has-error:focus {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1) !important;
+}

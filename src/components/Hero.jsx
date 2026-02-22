@@ -14,11 +14,10 @@ function Hero() {
       <div className="container">
         <div className="hero-content">
           <h1 className="hero-title">
-            Soluções em tecnologia para negócios
+            Desenvolvimento de Software e Soluções em Tecnologia
           </h1>
           <p className="hero-subtitle">
-            Alcance alta performance e mais tranquilidade com a TazSistemas. 
-            Inovação e experiência para o seu negócio.
+            Transformamos suas ideias em realidade com desenvolvimento de software, criação de sites, e-mail profissional e blogs. Tecnologia, arquitetura e excelência para o seu negócio.
           </p>
           <div className="hero-buttons">
             <button 
