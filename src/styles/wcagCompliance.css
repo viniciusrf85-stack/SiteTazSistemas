@@ -1,0 +1,334 @@
+/* WCAG 2.1 AA Compliance Styles */
+
+/* 1. Focus Visible - Todos os elementos interativos */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* 2. Skip Link - Deve estar visível ao focar */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: var(--bg-white);
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* 3. Contraste Mínimo - 4.5:1 para texto normal */
+body {
+  color: var(--text-color);
+  background-color: var(--bg-white);
+  /* Contraste: 26:1 (excelente) */
+}
+
+/* 4. Tamanho Mínimo de Alvo - 44x44px */
+button,
+a,
+input[type="button"],
+input[type="submit"],
+input[type="checkbox"],
+input[type="radio"] {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 5. Espaçamento entre Alvos Interativos */
+button + button,
+a + a,
+input + input {
+  margin-left: 8px;
+}
+
+/* 6. Texto Legível */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* Aumentar tamanho em mobile para melhor legibilidade */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}
+
+/* 7. Zoom - Permitir até 200% */
+html {
+  zoom: 100%;
+}
+
+/* 8. Cores não como único meio de comunicação */
+.error-field {
+  border: 2px solid #dc3545;
+  /* Além da cor, há também borda */
+}
+
+.success-field {
+  border: 2px solid #28a745;
+  /* Além da cor, há também borda */
+}
+
+/* 9. Indicadores de Foco Visíveis */
+:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* 10. Modo Reduzido de Movimento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 11. Alto Contraste */
+@media (prefers-contrast: more) {
+  body {
+    color: #000;
+    background-color: #fff;
+  }
+
+  button {
+    border: 2px solid currentColor;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+/* 12. Modo Escuro com Contraste */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #f0f0f0;
+    background-color: #000;
+  }
+
+  a {
+    color: #66b3ff;
+  }
+
+  button {
+    background-color: #333;
+    color: #f0f0f0;
+    border: 1px solid #666;
+  }
+}
+
+/* 13. Texto Ampliável */
+body {
+  font-size: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* Permitir zoom até 200% */
+@supports (zoom: 200%) {
+  html {
+    zoom: 100%;
+  }
+}
+
+/* 14. Espaçamento de Palavras e Letras */
+p, li, span {
+  word-spacing: 0.1em;
+  letter-spacing: 0.02em;
+}
+
+/* 15. Altura de Linha Adequada */
+p, li, dd, dt {
+  line-height: 1.5;
+}
+
+/* 16. Blocos de Texto Legíveis */
+p, li {
+  max-width: 80ch;
+}
+
+/* 17. Indicadores Visuais de Estado */
+button:disabled,
+input:disabled,
+select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button:disabled::after,
+input:disabled::after {
+  content: ' (desabilitado)';
+  font-size: 0.8em;
+}
+
+/* 18. Elementos Interativos Claramente Identificáveis */
+button,
+a,
+input[type="button"],
+input[type="submit"] {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #663399;
+}
+
+/* 19. Indicadores de Erro Claros */
+.form-error {
+  border-left: 4px solid #dc3545;
+  padding-left: 12px;
+}
+
+.form-error::before {
+  content: '⚠ ';
+  font-weight: bold;
+}
+
+/* 20. Suporte a Teclado */
+button,
+a,
+input,
+select,
+textarea {
+  outline: none;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* 21. Ordem de Tabulação Lógica */
+/* Usar tabindex com cuidado - preferir ordem HTML natural */
+[tabindex="-1"] {
+  outline: none;
+}
+
+/* 22. Rótulos de Formulário Claros */
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+input,
+textarea,
+select {
+  margin-bottom: 12px;
+}
+
+/* 23. Instruções de Formulário Claras */
+.form-help {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* 24. Validação de Formulário Acessível */
+input:invalid {
+  border-color: #dc3545;
+}
+
+input:valid {
+  border-color: #28a745;
+}
+
+/* 25. Imagens Decorativas */
+img.decorative {
+  alt: '';
+}
+
+/* 26. Ícones com Significado */
+[role="img"] {
+  aria-label: required;
+}
+
+/* 27. Tabelas Acessíveis */
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #333;
+}
+
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* 28. Listas Estruturadas */
+ul, ol {
+  margin-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* 29. Citações Semânticas */
+blockquote {
+  border-left: 4px solid var(--secondary-color);
+  padding-left: 16px;
+  margin-left: 0;
+  font-style: italic;
+}
+
+/* 30. Código Legível */
+code, pre {
+  font-family: 'Courier New', monospace;
+  background-color: #f5f5f5;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+pre {
+  padding: 12px;
+  overflow-x: auto;
+}

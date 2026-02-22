@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
+import ThemeToggle from './ThemeToggle'
 import './Header.css'
 
 function Header() {
@@ -78,13 +79,16 @@ function Header() {
             </a>
           </nav>
 
-          <button 
-            className="menu-toggle"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="header-actions">
+            <ThemeToggle />
+            <button 
+              className="menu-toggle"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
     </header>
