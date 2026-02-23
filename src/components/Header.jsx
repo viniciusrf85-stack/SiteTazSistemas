@@ -37,6 +37,7 @@ function Header() {
             <div className="logo-text">
               <h1>TAZSistemas</h1>
               <span className="logo-tagline">Technology · Architecture · Zenith</span>
+              <span className="logo-subtitle">Levamos sua tecnologia e arquitetura ao ponto máximo de excelência</span>
             </div>
           </div>
           
